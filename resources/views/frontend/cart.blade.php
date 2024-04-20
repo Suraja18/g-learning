@@ -29,7 +29,7 @@
                 @php $total += $details['price'] * $details['quantity'] @endphp
                 <div class="cart-wizard-area">
                     <div class="image">
-                        <img src="{{asset('uploads/courses/' . $details['image'])}}" alt="course image" />
+                        <img src="{{asset('public/uploads/courses/' . $details['image'])}}" alt="course image" />
                     </div>
                     <div class="text">
                         <h6><a href="{{route('courseDetails', encryptor('encrypt', $id))}}">{{$details['title_en']}}</a>

@@ -58,7 +58,7 @@
                                 @php $total += $details['price'] * $details['quantity'] @endphp
                                 <div class="productContent">
                                     <div class="productContent-item__img productContent-item">
-                                        <img src="{{asset('uploads/courses/' . $details['image'])}}"
+                                        <img src="{{asset('public/uploads/courses/' . $details['image'])}}"
                                             alt="checkout" />
                                     </div>
                                     <div class="productContent-item__info productContent-item">
@@ -249,7 +249,7 @@
                     </div>
                     <div class="col-lg-7 order-1 order-lg-0">
                         <div class="signup-area-image">
-                            <img src="{{asset('frontend/dist/images/signup/Illustration.png')}}"
+                            <img src="{{asset('public/frontend/dist/images/signup/Illustration.png')}}"
                                 alt="Illustration Image" class="img-fluid" />
                         </div>
                     </div>

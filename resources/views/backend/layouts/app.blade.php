@@ -9,9 +9,9 @@
     <title>{{ENV('APP_NAME')}} | @yield('title')</title>
 
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon.png')}}">
-    <link rel="stylesheet" href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/images/favicon.png')}}">
+    <link rel="stylesheet" href="{{asset('public/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/css/style.css')}}">
 
     @stack('styles')
 
@@ -30,9 +30,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="{{route('home')}}" class="brand-logo">
-                <img class="logo-abbr" src="{{asset('images/logo-white.png')}}" alt="">
-                <img class="logo-compact" src="{{asset('images/d-logo.png')}}" alt="">
-                <img class="brand-title" src="{{asset('images/d-logo.png')}}" alt="">
+                <img class="logo-abbr" src="{{asset('public/images/logo-white.png')}}" alt="">
+                <img class="logo-compact" src="{{asset('public/images/d-logo.png')}}" alt="">
+                <img class="brand-title" src="{{asset('public/images/d-logo.png')}}" alt="">
             </a>
 
             <div class="nav-control">
@@ -137,7 +137,7 @@
                             </li>
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" title="Profile Info" href="#" role="button" data-toggle="dropdown">
-                                    <img src="{{asset('uploads/users/'.request()->session()->get('image'))}}"
+                                    <img src="{{asset('public/uploads/users/'.request()->session()->get('image'))}}"
                                         width="20" alt="">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -364,15 +364,15 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="{{asset('vendor/global/global.min.js')}}"></script>
-    <script src="{{asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
-    <script src="{{asset('js/custom.min.js')}}"></script>
-    <script src="{{asset('js/dlabnav-init.js')}}"></script>
+    <script src="{{asset('public/vendor/global/global.min.js')}}"></script>
+    <script src="{{asset('public/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
+    <script src="{{asset('public/js/custom.min.js')}}"></script>
+    <script src="{{asset('public/js/dlabnav-init.js')}}"></script>
 
     <!-- Svganimation scripts -->
-    <script src="{{asset('vendor/svganimation/vivus.min.js')}}"></script>
-    <script src="{{asset('vendor/svganimation/svg.animation.js')}}"></script>
-    <script src="{{asset('js/styleSwitcher.js')}}"></script>
+    <script src="{{asset('public/vendor/svganimation/vivus.min.js')}}"></script>
+    <script src="{{asset('public/vendor/svganimation/svg.animation.js')}}"></script>
+    <script src="{{asset('public/js/styleSwitcher.js')}}"></script>
 
     @stack('scripts')
     {{-- TOASTER --}}

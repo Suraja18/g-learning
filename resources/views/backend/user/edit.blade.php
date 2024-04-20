@@ -3,13 +3,13 @@
 
 @push('styles')
 <!-- Favicon icon -->
-<link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon.png')}}">
-<link rel="stylesheet" href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}">
-<link rel="stylesheet" href="{{asset('css/style.css')}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/images/favicon.png')}}">
+<link rel="stylesheet" href="{{asset('public/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}">
+<link rel="stylesheet" href="{{asset('public/css/style.css')}}">
 
 <!-- Pick date -->
-<link rel="stylesheet" href="{{asset('vendor/pickadate/themes/default.css')}}">
-<link rel="stylesheet" href="{{asset('vendor/pickadate/themes/default.date.css')}}">
+<link rel="stylesheet" href="{{asset('public/vendor/pickadate/themes/default.css')}}">
+<link rel="stylesheet" href="{{asset('public/vendor/pickadate/themes/default.date.css')}}">
 @endpush
 
 @section('content')
@@ -164,10 +164,10 @@
 
 @push('scripts')
 <!-- pickdate -->
-<script src="{{asset('vendor/pickadate/picker.js')}}"></script>
-<script src="{{asset('vendor/pickadate/picker.time.js')}}"></script>
-<script src="{{asset('vendor/pickadate/picker.date.js')}}"></script>
+<script src="{{asset('public/vendor/pickadate/picker.js')}}"></script>
+<script src="{{asset('public/vendor/pickadate/picker.time.js')}}"></script>
+<script src="{{asset('public/vendor/pickadate/picker.date.js')}}"></script>
 
 <!-- Pickdate -->
-<script src="{{asset('js/plugins-init/pickadate-init.js')}}"></script>
+<script src="{{asset('public/js/plugins-init/pickadate-init.js')}}"></script>
 @endpush

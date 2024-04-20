@@ -54,7 +54,7 @@
             </div>
             <div class="col-xl-7 order-1 order-xl-0">
                 <div class="signup-area-image">
-                    <img src="{{asset('frontend/dist/images/signup/Illustration.png')}}" alt="Illustration Image"
+                    <img src="{{asset('public/frontend/dist/images/signup/Illustration.png')}}" alt="Illustration Image"
                         class="img-fluid" />
                 </div>
             </div>

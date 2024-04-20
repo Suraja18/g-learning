@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ ENV('APP_NAME') }} | @yield('title', 'Home')</title>
-    <link rel="stylesheet" href="{{ asset('frontend/dist/main.css') }}" />
-    <link rel="icon" type="image/png" href="{{ asset('frontend/dist/images/favicon/favicon.png') }}" />
-    <link rel="stylesheet" href="{{ asset('frontend/fontawesome-free-5.15.4-web/css/all.min.css') }}">
+    <title>{{ENV('APP_NAME')}} | @yield('title', 'Home')</title>
+    <link rel="stylesheet" href="{{asset('public/frontend/dist/main.css')}}" />
+    <link rel="icon" type="image/png" href="{{asset('public/frontend/dist/images/favicon/favicon.png')}}" />
+    <link rel="stylesheet" href="{{asset('public/frontend/fontawesome-free-5.15.4-web/css/all.min.css')}}">
     <style>
         .dropdown {
             position: relative;
@@ -53,8 +53,8 @@
         <nav class="navbar navbar-expand-xl navbar-light bg-transparent">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('frontend/dist/images/logo/logo.png') }}" alt="Logo" class="img-fluid" />
+                <a class="navbar-brand" href="{{route('home')}}">
+                    <img src="{{asset('public/frontend/dist/images/logo/logo.png')}}" alt="Logo" class="img-fluid" />
                 </a>
                 <button class="menu-icon-container">
                     <span class="menu-icon"></span>
@@ -63,13 +63,13 @@
                 <div class="collapse navbar-collapse d-none d-xl-block d-none d-xl-block" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
+                            <a class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ route('searchCourse') }}">Courses</a>
+                            <a class="nav-link" aria-current="page" href="{{route('searchCourse')}}">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ route('about') }}">About</a>
+                            <a class="nav-link" aria-current="page" href="{{route('about')}}">About</a>
                         </li>
                         {{-- <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8081/">
@@ -77,10 +77,10 @@
                             </a>
                         </li> --}}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                            <a class="nav-link" href="{{route('contact')}}">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('dashboard') }}">Admin</a>
+                            <a class="nav-link" href="{{route('dashboard')}}">Admin</a>
                         </li>
                     </ul>
                     <div class="d-flex align-items-center justify-content-between rightContent">
@@ -89,8 +89,8 @@
                                 onclick="openSearch()">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="9.19522" cy="9.19518" r="7.61714" stroke="#35343E"
-                                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></circle>
+                                    <circle cx="9.19522" cy="9.19518" r="7.61714" stroke="#35343E" stroke-width="1.6"
+                                        stroke-linecap="round" stroke-linejoin="round"></circle>
                                     <path d="M15.0493 15.4866L18.3493 18.778" stroke="#35343E" stroke-width="1.6"
                                         stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
@@ -106,15 +106,14 @@
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-search">
                                                 <circle cx="11" cy="11" r="8"></circle>
-                                                <line x1="21" y1="21" x2="16.65" y2="16.65">
-                                                </line>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                                             </svg>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </form>
-                        <a href="{{ route('cart') }}" class="cart-nav border-0 bg-transparent mx-3">
+                        <a href="{{route('cart')}}" class="cart-nav border-0 bg-transparent mx-3">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -124,21 +123,21 @@
                             <span class="badge bg-primary">{{ count((array) session('cart')) }}</span>
                             <span class="visually-hidden">Items Added</span>
                         </a>
-                        @if (request()->session()->get('studentLogin'))
-                            <div class="dropdown user-image ms-3" id="imageDropdown">
-                                <a href="{{ route('studentdashboard') }}" onclick="toggleDropdown(event)">
-                                    <img src="{{ asset('uploads/students/' . request()->session()->get('image')) }}"
-                                        alt="Student Profile" height="48" width="48" />
-                                </a>
-                                <div class="dropdown-content">
-                                    <a href="{{ route('student_profile') }}">Profile</a>
-                                    <a href="{{ route('studentdashboard') }}">Dashboard</a>
-                                    <a href="{{ route('studentlogOut') }}" class="text-danger">Logout</a>
-                                </div>
+                        @if(request()->session()->get('studentLogin'))
+                        <div class="dropdown user-image ms-3" id="imageDropdown">
+                            <a href="{{route('studentdashboard')}}" onclick="toggleDropdown(event)">
+                                <img src="{{asset('public/uploads/students/'.request()->session()->get('image'))}}"
+                                    alt="Student Profile" height="48" width="48"/>
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="{{route('student_profile')}}">Profile</a>
+                                <a href="{{route('studentdashboard')}}">Dashboard</a>
+                                <a href="{{route('studentlogOut')}}" class="text-danger">Logout</a>
                             </div>
+                        </div>
                         @else
-                            <a href="{{ route('studentLogin') }}" class="button button--text">Sign in</a>
-                            <a href="{{ route('studentRegister') }}" class="button button--dark">Sign Up</a>
+                        <a href="{{route('studentLogin')}}" class="button button--text">Sign in</a>
+                        <a href="{{route('studentRegister')}}" class="button button--dark">Sign Up</a>
                         @endif
                     </div>
                 </div>
@@ -148,7 +147,7 @@
                     <div>
                         <div class="navbar-mobile__top">
                             <a href="index.html">
-                                <img src="{{ asset('frontend/dist/images/logo/logo.png') }}" alt="brand"
+                                <img src="{{asset('public/frontend/dist/images/logo/logo.png')}}" alt="brand"
                                     class="img-fluid" />
                             </a>
                             <div>
@@ -177,17 +176,17 @@
                         <div class="navbar-mobile__menu">
                             <ul class="navbar-mobile__menu-list">
                                 <li class="active navbar-mobile__menu-item">
-                                    <a href="{{ route('home') }}">
+                                    <a href="{{route('home')}}">
                                         <span class="navbar-mobile__menu-link"> Home</span>
                                     </a>
                                 </li>
                                 <li class="navbar-mobile__menu-item">
-                                    <a href="{{ route('searchCourse') }}">
+                                    <a href="{{route('searchCourse')}}">
                                         <span class="navbar-mobile__menu-link"> Courses </span>
                                     </a>
                                 </li>
                                 <li class="navbar-mobile__menu-item">
-                                    <a href="{{ route('about') }}">
+                                    <a href="{{route('about')}}">
                                         <span class="navbar-mobile__menu-link"> About </span>
                                     </a>
                                 </li>
@@ -196,22 +195,22 @@
                                         <span class="navbar-mobile__menu-link"> Pages </span>
                                         <span class="navbar-mobile__menu-dropicon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-chevron-right">
                                                 <polyline points="9 18 15 12 9 6"></polyline>
                                             </svg>
                                         </span>
                                     </a>
                                     <ul class="navbar-mobile__menu-dropmenu">
-                                        <li><a href="{{ route('searchCourse') }}">Courses</a></li>
-                                        <li><a href="{{ route('student_profile') }}">Student Profile</a></li>
-                                        <li><a href="{{ route('about') }}">About</a></li>
-                                        <li><a href="{{ route('contact') }}">Contact</a></li>
+                                        <li><a href="{{route('searchCourse')}}">Courses</a></li>
+                                        <li><a href="{{route('student_profile')}}">Student Profile</a></li>
+                                        <li><a href="{{route('about')}}">About</a></li>
+                                        <li><a href="{{route('contact')}}">Contact</a></li>
                                     </ul>
                                 </li>
                                 <li class="navbar-mobile__menu-item">
-                                    <a href="{{ route('contact') }}">
+                                    <a href="{{route('contact')}}">
                                         <span class="navbar-mobile__menu-link"> Contact </span>
                                     </a>
                                 </li>
@@ -298,7 +297,7 @@
                 <div class="col-lg-6">
                     <div class="footer__wrapper">
                         <div class="footer__wrapper_logo">
-                            <img src="{{ asset('frontend/dist/images/logo/footerlogo.png') }}" alt="logo"
+                            <img src="{{asset('public/frontend/dist/images/logo/footerlogo.png')}}" alt="logo"
                                 class="img-fluid" />
                         </div>
                         <p>
@@ -330,8 +329,7 @@
                                             <path
                                                 d="M17.9955 18.0002V17.9994H18V11.3979C18 8.16841 17.3047 5.68066 13.5292 5.68066C11.7142 5.68066 10.4962 6.67666 9.99896 7.62091H9.94646V5.98216H6.3667V17.9994H10.0942V12.0489C10.0942 10.4822 10.3912 8.96716 12.3315 8.96716C14.2432 8.96716 14.2717 10.7552 14.2717 12.1494V18.0002H17.9955Z"
                                                 fill="white"></path>
-                                            <path d="M0.296875 5.98291H4.02888V18.0002H0.296875V5.98291Z"
-                                                fill="white">
+                                            <path d="M0.296875 5.98291H4.02888V18.0002H0.296875V5.98291Z" fill="white">
                                             </path>
                                             <path
                                                 d="M2.1615 0C0.96825 0 0 0.96825 0 2.1615C0 3.35475 0.96825 4.34325 2.1615 4.34325C3.35475 4.34325 4.323 3.35475 4.323 2.1615C4.32225 0.96825 3.354 0 2.1615 0V0Z"
@@ -479,7 +477,7 @@
             <div class="container">
                 <div class="footer__bottom-content">
                     <div class="footer__bottom_copyright">
-                        <p>© 2024 - G-Learning. All rights reserved</p>
+                        <p>© 2021 - Eduguard. All rights reserved</p>
                     </div>
                     <div class="footer__bottom_topbutton">
                         <a href="#">
@@ -498,23 +496,23 @@
         </div>
     </footer>
 
-    <script src="{{ asset('frontend/src/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('frontend/src/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('frontend/src/scss/vendors/plugin/js/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('frontend/src/scss/vendors/plugin/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('frontend/src/scss/vendors/plugin/js/slick.min.js') }}"></script>
-    <script src="{{ asset('frontend/src/scss/vendors/plugin/js/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('frontend/src/js/app.js') }}"></script>
-    <script src="{{ asset('frontend/dist/main.js') }}"></script>
+    <script src="{{asset('public/frontend/src/js/jquery.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/slick.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/js/app.js')}}"></script>
+    <script src="{{asset('public/frontend/dist/main.js')}}"></script>
 
     <script>
         function toggleDropdown(event) {
             event.preventDefault();
             var dropdown = document.getElementById('imageDropdown');
             dropdown.classList.toggle('active');
-
+    
             // Close the dropdown when clicking somewhere else on the page
-            document.body.addEventListener('click', function(e) {
+            document.body.addEventListener('click', function (e) {
                 if (!dropdown.contains(e.target)) {
                     dropdown.classList.remove('active');
                 }
@@ -526,18 +524,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
     <script>
-        @if (Session::has('success'))
-            toastr.success("{{ Session::get('success') }}");
-        @endif
-        @if (Session::has('info'))
-            toastr.info("{{ Session::get('info') }}");
-        @endif
-        @if (Session::has('warning'))
-            toastr.warning("{{ Session::get('warning') }}");
-        @endif
-        @if (Session::has('error'))
-            toastr.error("{{ Session::get('error') }}");
-        @endif
+        @if(Session::has('success'))  
+        				toastr.success("{{ Session::get('success') }}");  
+        		@endif  
+        		@if(Session::has('info'))  
+        				toastr.info("{{ Session::get('info') }}");  
+        		@endif  
+        		@if(Session::has('warning'))  
+        				toastr.warning("{{ Session::get('warning') }}");  
+        		@endif  
+        		@if(Session::has('error'))  
+        				toastr.error("{{ Session::get('error') }}");  
+        		@endif  
     </script>
 
     @stack('scripts')

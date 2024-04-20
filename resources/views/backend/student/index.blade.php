@@ -3,7 +3,7 @@
 
 @push('styles')
 <!-- Datatable -->
-<link href="{{asset('vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+<link href="{{asset('public/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -63,7 +63,7 @@
                                             @forelse ($data as $d)
                                             <tr>
                                                 <td><img class="rounded-circle" width="35" height="35"
-                                                        src="{{asset('uploads/students/'.$d->image)}}" alt=""></td>
+                                                        src="{{asset('public/uploads/students/'.$d->image)}}" alt=""></td>
                                                 <td><strong>{{$d->name_en}}</strong></td>
                                                 <td>{{$d->email}}</td>
                                                 <td>{{$d->contact_en}}</td>
@@ -125,7 +125,7 @@
                                     <div class="card-body pt-2">
                                         <div class="text-center">
                                             <div class="profile-photo">
-                                                <img src="{{asset('uploads/students/'.$d->image)}}" width="100"
+                                                <img src="{{asset('public/uploads/students/'.$d->image)}}" width="100"
                                                     height="100" class="rounded-circle" alt="">
                                             </div>
                                             <h3 class="mt-4 mb-1">{{$d->name_en}}</h3>
@@ -180,7 +180,7 @@
 
 @push('scripts')
 <!-- Datatable -->
-<script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
+<script src="{{asset('public/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('public/js/plugins-init/datatables.init.js')}}"></script>
 
 @endpush

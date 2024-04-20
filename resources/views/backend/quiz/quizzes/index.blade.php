@@ -3,7 +3,7 @@
 
 @push('styles')
 <!-- Datatable -->
-<link href="{{asset('vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+<link href="{{asset('public/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -100,7 +100,7 @@
 
 @push('scripts')
 <!-- Datatable -->
-<script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
+<script src="{{asset('public/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('public/js/plugins-init/datatables.init.js')}}"></script>
 
 @endpush

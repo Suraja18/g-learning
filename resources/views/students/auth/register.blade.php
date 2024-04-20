@@ -73,7 +73,7 @@
             </div>
             <div class="col-lg-7 order-1 order-lg-0">
                 <div class="signup-area-image">
-                    <img src="{{asset('frontend/dist/images/signup/Illustration.png')}}" alt="Illustration Image"
+                    <img src="{{asset('public/frontend/dist/images/signup/Illustration.png')}}" alt="Illustration Image"
                         class="img-fluid" /> 
                 </div>
             </div>

@@ -24,11 +24,11 @@
             <div class="col-lg-6">
                 <div class="hero__img-content">
                     <div class="hero__img-content--main">
-                        <img src="{{asset('frontend/dist/images/contact/image.jpg')}}" alt="image" />
+                        <img src="{{asset('public/frontend/dist/images/contact/image.jpg')}}" alt="image" />
                     </div>
-                    <img src="{{asset('frontend/dist/images/shape/dots/dots-img-02.png')}}" alt="shape"
+                    <img src="{{asset('public/frontend/dist/images/shape/dots/dots-img-02.png')}}" alt="shape"
                         class="hero__img-content--shape-01" />
-                    <img src="{{asset('frontend/dist/images/shape/rec05.png')}}" alt="shape"
+                    <img src="{{asset('public/frontend/dist/images/shape/rec05.png')}}" alt="shape"
                         class="hero__img-content--shape-02" />
                 </div>
             </div>
@@ -61,7 +61,7 @@
 
 <!-- Get in Touch Area Starts Here -->
 <section class="section getin-touch overflow-hidden"
-    style="background-image: url({{asset('frontend/dist/images/contact/bg.png')}});">
+    style="background-image: url({{asset('public/frontend/dist/images/contact/bg.png')}});">
     <div class="container">
         <div class="row">
             <h2 class="font-title--md text-center">Get in Touch</h2>
@@ -96,7 +96,7 @@
                         <h5>+1202-555-0621</h5>
                     </div>
                 </div>
-                <img src="{{asset('frontend/dist/images/shape/dots/dots-img-03.png')}}" alt="Shape"
+                <img src="{{asset('public/frontend/dist/images/shape/dots/dots-img-03.png')}}" alt="Shape"
                     class="img-fluid contact-feature-shape" />
             </div>
             <div class="col-lg-7 form-area">
@@ -132,9 +132,9 @@
                     </div>
                 </form>
                 <div class="form-area-shape">
-                    <img src="{{asset('frontend/dist/images/shape/circle3.png')}}" alt="Shape"
+                    <img src="{{asset('public/frontend/dist/images/shape/circle3.png')}}" alt="Shape"
                         class="img-fluid shape-01" />
-                    <img src="{{asset('frontend/dist/images/shape/circle5.png')}}" alt="Shape"
+                    <img src="{{asset('public/frontend/dist/images/shape/circle5.png')}}" alt="Shape"
                         class="img-fluid shape-02" />
                 </div>
             </div>

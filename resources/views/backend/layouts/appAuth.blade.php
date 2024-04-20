@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ENV('APP_NAME')}} | @yield('title') </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon.png')}}">
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/images/favicon.png')}}">
+    <link href="{{asset('public/css/style.css')}}" rel="stylesheet">
 
 </head>
 
@@ -28,9 +28,9 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="{{asset('vendor/global/global.min.js')}}"></script>
-    <script src="{{asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
-    <script src="{{asset('js/dlabnav-init.js')}}"></script>
+    <script src="{{asset('public/vendor/global/global.min.js')}}"></script>
+    <script src="{{asset('public/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
+    <script src="{{asset('public/js/dlabnav-init.js')}}"></script>
     <!--endRemoveIf(production)-->
 
     {{-- TOASTER --}}

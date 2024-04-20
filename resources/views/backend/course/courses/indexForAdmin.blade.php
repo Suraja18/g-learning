@@ -3,7 +3,7 @@
 
 @push('styles')
 <!-- Datatable -->
-<link href="{{asset('vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+<link href="{{asset('public/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -53,7 +53,7 @@
                                         <tbody>
                                             @forelse ($course as $d)
                                             <tr>
-                                                <td><img class="img fluid" width="100" src="{{asset('uploads/courses/'.$d->image)}}" alt="">
+                                                <td><img class="img fluid" width="100" src="{{asset('public/uploads/courses/'.$d->image)}}" alt="">
                                             </td>
                                                 <td><strong>{{$d->title_en}}</strong></td>
                                                 <td><strong>{{$d->instructor?->name_en}}</strong></td>
@@ -109,7 +109,7 @@
 
 @push('scripts')
 <!-- Datatable -->
-<script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
+<script src="{{asset('public/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('public/js/plugins-init/datatables.init.js')}}"></script>
 
 @endpush

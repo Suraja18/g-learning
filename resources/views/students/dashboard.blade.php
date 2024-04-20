@@ -25,7 +25,7 @@
                 <div>
                     <div class="students-info-intro-start">
                         <div class="image">
-                            <img src="{{ asset('uploads/students/' . $student_info->image) }}" alt="Student" />
+                            <img src="{{ asset('public/uploads/students/' . $student_info->image) }}" alt="Student" />
                         </div>
                         <div class="text">
                             <h5>{{$student_info->name_en}}</h5>
@@ -141,7 +141,7 @@
                         <div class="col-lg-4 col-md-6 col-md-6 mb-4">
                             <div class="contentCard contentCard--watch-course">
                                 <div class="contentCard-top">
-                                    <a href="#"><img src="{{asset('uploads/courses/'.$a->course?->image)}}"
+                                    <a href="#"><img src="{{asset('public/uploads/courses/'.$a->course?->image)}}"
                                             alt="images" class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -152,7 +152,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="{{route('instructorProfile', encryptor('encrypt', $a->course?->instructor->id))}}"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('uploads/users/'.$a->course?->instructor?->image)}}"
+                                            <img src="{{asset('public/uploads/users/'.$a->course?->instructor?->image)}}"
                                                 alt="client-image" class="rounded-circle" height="34" width="34" />
                                             <p class="font-para--md">{{$a->course?->instructor?->name_en}}</p>
                                         </a>
@@ -218,7 +218,7 @@
                             <div class="contentCard contentCard--watch-course">
                                 <div class="contentCard-top">
                                     <a href="#"><img
-                                            src="{{asset('frontend/dist/images/courses/demo-img-04.png')}}"
+                                            src="{{asset('public/frontend/dist/images/courses/demo-img-04.png')}}"
                                             alt="images" class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -229,7 +229,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="instructor-profile.html"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('frontend/dist/images/courses/7.png')}}"
+                                            <img src="{{asset('public/frontend/dist/images/courses/7.png')}}"
                                                 alt="client-image" class="rounded-circle" />
                                             <p class="font-para--md">Brandon Dias</p>
                                         </a>
@@ -250,7 +250,7 @@
                             <div class="contentCard contentCard--watch-course">
                                 <div class="contentCard-top">
                                     <a href="#"><img
-                                            src="{{asset('frontend/dist/images/courses/demo-img-05.png')}}"
+                                            src="{{asset('public/frontend/dist/images/courses/demo-img-05.png')}}"
                                             alt="images" class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -261,7 +261,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="instructor-profile.html"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('frontend/dist/images/courses/7.png')}}"
+                                            <img src="{{asset('public/frontend/dist/images/courses/7.png')}}"
                                                 alt="client-image" class="rounded-circle" />
                                             <p class="font-para--md">Brandon Dias</p>
                                         </a>
@@ -282,7 +282,7 @@
                             <div class="contentCard contentCard--watch-course">
                                 <div class="contentCard-top">
                                     <a href="#"><img
-                                            src="{{asset('frontend/dist/images/courses/demo-img-01.png')}}"
+                                            src="{{asset('public/frontend/dist/images/courses/demo-img-01.png')}}"
                                             alt="images" class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -293,7 +293,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="instructor-profile.html"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('frontend/dist/images/courses/7.png')}}"
+                                            <img src="{{asset('public/frontend/dist/images/courses/7.png')}}"
                                                 alt="client-image" class="rounded-circle" />
                                             <p class="font-para--md">Brandon Dias</p>
                                         </a>
@@ -345,7 +345,7 @@
                             <div class="contentCard contentCard--watch-course">
                                 <div class="contentCard-top">
                                     <a href="#"><img
-                                            src="{{asset('frontend/dist/images/courses/demo-img-02.png')}}"
+                                            src="{{asset('public/frontend/dist/images/courses/demo-img-02.png')}}"
                                             alt="images" class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -356,7 +356,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="instructor-profile.html"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('frontend/dist/images/courses/7.png')}}"
+                                            <img src="{{asset('public/frontend/dist/images/courses/7.png')}}"
                                                 alt="client-image" class="rounded-circle" />
                                             <p class="font-para--md">Brandon Dias</p>
                                         </a>
@@ -377,7 +377,7 @@
                             <div class="contentCard contentCard--watch-course">
                                 <div class="contentCard-top">
                                     <a href="#"><img
-                                            src="{{asset('frontend/dist/images/courses/demo-img-03.png')}}"
+                                            src="{{asset('public/frontend/dist/images/courses/demo-img-03.png')}}"
                                             alt="images" class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -388,7 +388,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="instructor-profile.html"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('frontend/dist/images/courses/7.png')}}"
+                                            <img src="{{asset('public/frontend/dist/images/courses/7.png')}}"
                                                 alt="client-image" class="rounded-circle" />
                                             <p class="font-para--md">Brandon Dias</p>
                                         </a>
@@ -409,7 +409,7 @@
                             <div class="contentCard contentCard--watch-course">
                                 <div class="contentCard-top">
                                     <a href="#"><img
-                                            src="{{asset('frontend/dist/images/courses/demo-img-04.png')}}"
+                                            src="{{asset('public/frontend/dist/images/courses/demo-img-04.png')}}"
                                             alt="images" class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -420,7 +420,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="instructor-profile.html"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('frontend/dist/images/courses/7.png')}}"
+                                            <img src="{{asset('public/frontend/dist/images/courses/7.png')}}"
                                                 alt="client-image" class="rounded-circle" />
                                             <p class="font-para--md">Brandon Dias</p>
                                         </a>
@@ -493,7 +493,7 @@
                                             class="purchase-area-items-start d-flex align-items-lg-center flex-column flex-lg-row">
                                             <div class="image">
                                                 <a href="#">
-                                                    <img src="{{asset('uploads/courses/'.$data->image)}}"
+                                                    <img src="{{asset('public/uploads/courses/'.$data->image)}}"
                                                         alt="Image" />
                                                 </a>
                                             </div>

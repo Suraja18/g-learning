@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ENV('APP_NAME')}} | @yield('title', 'Watch Course')</title>
-    <link rel="stylesheet" href="{{asset('frontend/src/scss/vendors/plugin/css/video-js.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/src/scss/vendors/plugin/css/star-rating-svg.css')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/dist/main.css')}}" />
-    <link rel="icon" type="image/png" href="{{asset('frontend/dist/images/favicon/favicon.png')}}" />
-    <link rel="stylesheet" href="{{asset('frontend/fontawesome-free-5.15.4-web/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/src/scss/vendors/plugin/css/video-js.css')}}" />
+    <link rel="stylesheet" href="{{asset('public/frontend/src/scss/vendors/plugin/css/star-rating-svg.css')}}" />
+    <link rel="stylesheet" href="{{asset('public/frontend/dist/main.css')}}" />
+    <link rel="icon" type="image/png" href="{{asset('public/frontend/dist/images/favicon/favicon.png')}}" />
+    <link rel="stylesheet" href="{{asset('public/frontend/fontawesome-free-5.15.4-web/css/all.min.css')}}">
     <style>
         .vjs-poster {
             width: 100%;
@@ -28,7 +28,7 @@
             <div class="coursedescription-header">
                 <div class="coursedescription-header-start">
                     <a class="logo-image" href="{{route('home')}}">
-                        <img src="{{asset('frontend/dist/images/logo/logo.png')}}" alt="Logo" />
+                        <img src="{{asset('public/frontend/dist/images/logo/logo.png')}}" alt="Logo" />
                     </a>
                     <div class="topic-info">
                         <div class="topic-info-arrow">
@@ -73,7 +73,7 @@
                 <div class="course-description-start">
                     <div class="video-area">
                         <video controls id="myvideo" class="video-js w-100"
-                            poster="{{asset('frontend/dist/images/courses/vthumb.jpg')}}">
+                            poster="{{asset('public/frontend/dist/images/courses/vthumb.jpg')}}">
                             <source src="" class="w-100" />
                         </video>
                     </div>
@@ -157,7 +157,7 @@
                                             <div class="feedback-rating">
                                                 <div class="feedback-rating-start">
                                                     <div class="image">
-                                                        <img src="{{asset('frontend/dist/images/ellipse/user.jpg')}}" alt="Image" />
+                                                        <img src="{{asset('public/frontend/dist/images/ellipse/user.jpg')}}" alt="Image" />
                                                     </div>
                                                     <div class="text">
                                                         <h6><a href="#">Harry Pinsky</a></h6>
@@ -176,7 +176,7 @@
                                             <div class="feedback-rating">
                                                 <div class="feedback-rating-start">
                                                     <div class="image">
-                                                        <img src="{{asset('frontend/dist/images/ellipse/1.png')}}" alt="Image" />
+                                                        <img src="{{asset('public/frontend/dist/images/ellipse/1.png')}}" alt="Image" />
                                                     </div>
                                                     <div class="text">
                                                         <h6><a href="#">Harry Pinsky</a></h6>
@@ -193,7 +193,7 @@
                                             <div class="feedback-rating">
                                                 <div class="feedback-rating-start">
                                                     <div class="image">
-                                                        <img src="{{asset('frontend/dist/images/ellipse/2.png')}}" alt="Image" />
+                                                        <img src="{{asset('public/frontend/dist/images/ellipse/2.png')}}" alt="Image" />
                                                     </div>
                                                     <div class="text">
                                                         <h6><a href="#">Watcraz Eggsy</a></h6>
@@ -212,7 +212,7 @@
                                             <div class="feedback-rating">
                                                 <div class="feedback-rating-start">
                                                     <div class="image">
-                                                        <img src="{{asset('frontend/dist/images/ellipse/3.png')}}" alt="Image" />
+                                                        <img src="{{asset('public/frontend/dist/images/ellipse/3.png')}}" alt="Image" />
                                                     </div>
                                                     <div class="text">
                                                         <h6><a href="#">Watcraz Eggsy</a></h6>
@@ -257,7 +257,7 @@
                                         <div class="course-instructor mw-100">
                                             <div class="course-instructor-info">
                                                 <div class="instructor-image">
-                                                    <img src="{{asset('uploads/users/'.$course?->instructor?->image)}}"
+                                                    <img src="{{asset('public/uploads/users/'.$course?->instructor?->image)}}"
                                                         alt="Instructor" />
                                                 </div>
                                                 <div class="instructor-text">
@@ -395,15 +395,15 @@
 
 
 
-    <script src="{{asset('frontend/src/js/jquery.min.js')}}"></script>
-    <script src="{{asset('frontend/src/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('frontend/src/scss/vendors/plugin/js/video.min.js')}}"></script>
-    <script src="{{asset('frontend/src/scss/vendors/plugin/js/isotope.pkgd.min.js')}}"></script>
-    <script src="{{asset('frontend/src/scss/vendors/plugin/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{asset('frontend/src/scss/vendors/plugin/js/slick.min.js')}}"></script>
-    <script src="{{asset('frontend/src/scss/vendors/plugin/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{asset('frontend/src/scss/vendors/plugin/js/jquery.star-rating-svg.js')}}"></script>
-    <script src="{{asset('frontend/src/js/app.js')}}"></script>
+    <script src="{{asset('public/frontend/src/js/jquery.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/video.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/slick.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('public/frontend/src/scss/vendors/plugin/js/jquery.star-rating-svg.js')}}"></script>
+    <script src="{{asset('public/frontend/src/js/app.js')}}"></script>
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -417,7 +417,7 @@
         });
 
         function show_video(e){
-            let link="{{asset('uploads/courses/contents')}}/"+e
+            let link="{{asset('public/uploads/courses/contents')}}/"+e
            
             var video = document.getElementById('myvideo');
                         video.src = link;

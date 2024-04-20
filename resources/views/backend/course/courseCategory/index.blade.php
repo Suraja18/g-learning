@@ -3,7 +3,7 @@
 
 @push('styles')
 <!-- Datatable -->
-<link href="{{asset('vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+<link href="{{asset('public/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -71,7 +71,7 @@
                                                 </td>
                                                 <td>
                                                     <img class="rounded" width="200" height="100"
-                                                        src="{{asset('uploads/courseCategories/'.$d->category_image)}}"
+                                                        src="{{asset('public/uploads/courseCategories/'.$d->category_image)}}"
                                                         alt="">
                                                 </td>
                                                 <td>
@@ -123,7 +123,7 @@
                                     <div class="card-body pt-2">
                                         <div class="text-center">
                                             <div class="profile-photo">
-                                                <img src="{{asset('uploads/courseCategories/'.$d->category_image)}}"
+                                                <img src="{{asset('public/uploads/courseCategories/'.$d->category_image)}}"
                                                     class="w-100" alt="">
                                             </div>
                                             <h3 class="mt-4 mb-1">{{$d->category_name}}</h3>
@@ -175,6 +175,6 @@
 
 @push('scripts')
 <!-- Datatable -->
-<script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
+<script src="{{asset('public/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('public/js/plugins-init/datatables.init.js')}}"></script>
 @endpush
