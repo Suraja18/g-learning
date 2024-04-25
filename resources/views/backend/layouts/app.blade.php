@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="{{str_replace('_','_', app()->getLocale())}}">
+<html lang="{{ str_replace('_', '_', app()->getLocale()) }}">
 
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ENV('APP_NAME')}} | @yield('title')</title>
+    <title>{{ ENV('APP_NAME') }} | @yield('title')</title>
 
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon.png')}}">
-    <link rel="stylesheet" href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     @stack('styles')
 
@@ -29,10 +29,10 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="{{route('home')}}" class="brand-logo">
-                <img class="logo-abbr" src="{{asset('images/logo-white.png')}}" alt="">
-                <img class="logo-compact" src="{{asset('images/d-logo.png')}}" alt="">
-                <img class="brand-title" src="{{asset('images/d-logo.png')}}" alt="">
+            <a href="{{ route('home') }}" class="brand-logo">
+                <img class="logo-abbr" src="{{ asset('images/logo-white.png') }}" alt="">
+                <img class="logo-compact" src="{{ asset('images/d-logo.png') }}" alt="">
+                <img class="brand-title" src="{{ asset('images/d-logo.png') }}" alt="">
             </a>
 
             <div class="nav-control">
@@ -136,24 +136,27 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown header-profile">
-                                <a class="nav-link" title="Profile Info" href="#" role="button" data-toggle="dropdown">
-                                    <img src="{{asset('uploads/users/'.request()->session()->get('image'))}}"
+                                <a class="nav-link" title="Profile Info" href="#" role="button"
+                                    data-toggle="dropdown">
+                                    <img src="{{ asset('uploads/users/' . request()->session()->get('image')) }}"
                                         width="20" alt="">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="{{route('userProfile')}}" class="dropdown-item ai-icon">
-                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                    <a href="{{ route('userProfile') }}" class="dropdown-item ai-icon">
+                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" width="18"
+                                            height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-user">
                                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                             <circle cx="12" cy="7" r="4"></circle>
                                         </svg>
                                         <span class="ml-2">Profile</span>
                                     </a>
                                     <a href="email-inbox.html" class="dropdown-item ai-icon">
-                                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" width="18"
+                                            height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-mail">
                                             <path
                                                 d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
                                             </path>
@@ -161,14 +164,15 @@
                                         </svg>
                                         <span class="ml-2">Inbox </span>
                                     </a>
-                                    <a href="{{route('logOut')}}" class="dropdown-item ai-icon">
-                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
+                                    <a href="{{ route('logOut') }}" class="dropdown-item ai-icon">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" width="18"
+                                            height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                             class="feather feather-log-out">
                                             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                                             <polyline points="16 17 21 12 16 7"></polyline>
-                                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                                            <line x1="21" y1="12" x2="9" y2="12">
+                                            </line>
                                         </svg>
                                         <span class="ml-2">Logout </span>
                                     </a>
@@ -186,69 +190,74 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-        @if(fullAccess())
-        <div class="dlabnav">
-            <div class="dlabnav-scroll">
-                <ul class="metismenu" id="menu">
-                    <li class="nav-label first">Admin Panel</li>
-                    <li><a class="ai-icon" href="{{route('dashboard')}}" aria-expanded="false">
-                            <i class="las la-tachometer-alt"></i>
-                            <span class="nav-text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li><a class="ai-icon" href="{{route('home')}}" aria-expanded="false">
-                            <i class="las la-home"></i>
-                            <span class="nav-text">Home</span>
-                        </a>
-                    </li>
-                    <li class="nav-label">Main Menu</li>
-                    <li><a class="" href="{{route('role.index')}}" aria-expanded="false">
-                            <i class="las la-cog"></i>
-                            <span class="nav-text">Permissions</span>
-                        </a>
-                    </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="la la-universal-access"></i>
-                            <span class="nav-text">Roles</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{route('user.index')}}"><i class="la la-users"></i>Users</a></li>
-                            <li><a href="{{route('instructor.index')}}"><i
-                                        class="las la-chalkboard-teacher"></i>Instructors</a>
-                            </li>
-                            <li><a href="{{route('student.index')}}"><i class="las la-book-reader"></i>Students</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="las la-school"></i>
-                            <span class="nav-text">Courses</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{route('courseCategory.index')}}"><i class="la la-list"></i>Course
-                                    Category</a>
-                            </li>
-                            <li><a href="{{route('courseList')}}"><i class="las la-school"></i>Courses List</a></li>
-                            <li><a href="{{route('course.index')}}"><i class="las la-book-open"></i>All Courses</a></li>
-                            <li><a href="{{route('lesson.index')}}"><i class="las la-chalkboard"></i>Lessons</a></li>
-                            <li><a href="{{route('material.index')}}"><i class="las la-atom"></i></i>Materials</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="" href="{{route('enrollment.index')}}" aria-expanded="false">
-                            <i class="las la-bullseye"></i>
-                            <span class="nav-text">Enrollments</span>
-                        </a>
-                    </li>
-                    <li><a class="" href="{{route('event.index')}}" aria-expanded="false">
-                            <i class="las la-icons"></i>
-                            <span class="nav-text">Events</span>
-                        </a>
-                    </li>
-                    <li><a class="" href="{{route('coupon.index')}}" aria-expanded="false">
-                            <i class="las la-tags"></i>
-                            <span class="nav-text">Coupons</span>
-                        </a>
-                    </li>
-                    {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+        @if (fullAccess())
+            <div class="dlabnav">
+                <div class="dlabnav-scroll">
+                    <ul class="metismenu" id="menu">
+                        <li class="nav-label first">Admin Panel</li>
+                        <li><a class="ai-icon" href="{{ route('dashboard') }}" aria-expanded="false">
+                                <i class="las la-tachometer-alt"></i>
+                                <span class="nav-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li><a class="ai-icon" href="{{ route('home') }}" aria-expanded="false">
+                                <i class="las la-home"></i>
+                                <span class="nav-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-label">Main Menu</li>
+                        <li><a class="" href="{{ route('role.index') }}" aria-expanded="false">
+                                <i class="las la-cog"></i>
+                                <span class="nav-text">Permissions</span>
+                            </a>
+                        </li>
+                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                                <i class="la la-universal-access"></i>
+                                <span class="nav-text">Roles</span>
+                            </a>
+                            <ul aria-expanded="false">
+                                <li><a href="{{ route('user.index') }}"><i class="la la-users"></i>Users</a></li>
+                                <li><a href="{{ route('instructor.index') }}"><i
+                                            class="las la-chalkboard-teacher"></i>Instructors</a>
+                                </li>
+                                <li><a href="{{ route('student.index') }}"><i
+                                            class="las la-book-reader"></i>Students</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                                <i class="las la-school"></i>
+                                <span class="nav-text">Courses</span>
+                            </a>
+                            <ul aria-expanded="false">
+                                <li><a href="{{ route('courseCategory.index') }}"><i class="la la-list"></i>Course
+                                        Category</a>
+                                </li>
+                                <li><a href="{{ route('courseList') }}"><i class="las la-school"></i>Courses List</a>
+                                </li>
+                                <li><a href="{{ route('course.index') }}"><i class="las la-book-open"></i>All
+                                        Courses</a></li>
+                                <li><a href="{{ route('lesson.index') }}"><i
+                                            class="las la-chalkboard"></i>Lessons</a></li>
+                                <li><a href="{{ route('material.index') }}"><i
+                                            class="las la-atom"></i></i>Materials</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="" href="{{ route('enrollment.index') }}" aria-expanded="false">
+                                <i class="las la-bullseye"></i>
+                                <span class="nav-text">Enrollments</span>
+                            </a>
+                        </li>
+                        <li><a class="" href="{{ route('event.index') }}" aria-expanded="false">
+                                <i class="las la-icons"></i>
+                                <span class="nav-text">Events</span>
+                            </a>
+                        </li>
+                        <li><a class="" href="{{ route('coupon.index') }}" aria-expanded="false">
+                                <i class="las la-tags"></i>
+                                <span class="nav-text">Coupons</span>
+                            </a>
+                        </li>
+                        {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="las la-tasks"></i>
                             <span class="nav-text">Quizzes</span>
                         </a>
@@ -288,38 +297,43 @@
                             <li><a href="{{route('coupon.index')}}"><i class="las la-tags"></i>Coupons</a></li>
                         </ul>
                     </li> --}}
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
         @endif
 
-        @if(!fullAccess())
-        <div class="dlabnav">
-        <div class="dlabnav-scroll">
-            <ul class="metismenu" id="menu">
-                <li class="nav-label first">Instructor Panel</li>
-                <li><a class="ai-icon" href="{{route('dashboard')}}" aria-expanded="false">
-                        <i class="las la-tachometer-alt"></i> <span class="nav-text">Dashboard</span>
-                    </a>
-                </li>
-                <li><a class="ai-icon" href="{{route('home')}}" aria-expanded="false">
-                        <i class="las la-home"></i><span class="nav-text">Home</span>
-                    </a>
-                </li>
-                <li class="nav-label">Main Menu</li>
-                <li><a href="{{route('instructor.index')}}">
-                        <i class="las la-chalkboard-teacher"></i>Instructors List
-                    </a>
-                </li>
-                <li><a href="{{route('student.index')}}"><i class="las la-book-reader"></i>Students List</a></li>
-                <li><a href="{{route('course.index')}}"><i class="las la-book-open"></i>All Courses</a></li>
-                <li><a href="{{route('lesson.index')}}"><i class="las la-chalkboard"></i>Course Lessons</a></li>
-                <li><a href="{{route('material.index')}}"><i class="las la-atom"></i></i>Course Materials</a></li>
-                <li><a href="{{route('coupon.index')}}"><i class="las la-tags"></i>Coupons</a></li>
-                <li><a href="{{route('enrollment.index')}}"><i class="las la-bullseye"></i>Enrollments</a></li>
-            </ul>
-        </div>
-        </div>
+        @if (!fullAccess())
+            <div class="dlabnav">
+                <div class="dlabnav-scroll">
+                    <ul class="metismenu" id="menu">
+                        <li class="nav-label first">Instructor Panel</li>
+                        <li><a class="ai-icon" href="{{ route('dashboard') }}" aria-expanded="false">
+                                <i class="las la-tachometer-alt"></i> <span class="nav-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li><a class="ai-icon" href="{{ route('home') }}" aria-expanded="false">
+                                <i class="las la-home"></i><span class="nav-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-label">Main Menu</li>
+                        <li><a href="{{ route('instructor.index') }}">
+                                <i class="las la-chalkboard-teacher"></i>Instructors List
+                            </a>
+                        </li>
+                        <li><a href="{{ route('student.index') }}"><i class="las la-book-reader"></i>Students
+                                List</a></li>
+                        <li><a href="{{ route('course.index') }}"><i class="las la-book-open"></i>All Courses</a>
+                        </li>
+                        <li><a href="{{ route('lesson.index') }}"><i class="las la-chalkboard"></i>Course Lessons</a>
+                        </li>
+                        <li><a href="{{ route('material.index') }}"><i class="las la-atom"></i></i>Course
+                                Materials</a></li>
+                        <li><a href="{{ route('coupon.index') }}"><i class="las la-tags"></i>Coupons</a></li>
+                        <li><a href="{{ route('enrollment.index') }}"><i class="las la-bullseye"></i>Enrollments</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         @endif
         <!--**********************************
             Sidebar end
@@ -340,7 +354,8 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by <a href="../index.htm" target="_blank">DexignLab</a> 2020</p>
+                <p>Copyright © Designed &amp; Developed by <a href="www.pathakgokul.com.np"
+                        target="_blank">Glearning</a> 2024</p>
             </div>
         </div>
         <!--**********************************
@@ -364,33 +379,33 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="{{asset('vendor/global/global.min.js')}}"></script>
-    <script src="{{asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
-    <script src="{{asset('js/custom.min.js')}}"></script>
-    <script src="{{asset('js/dlabnav-init.js')}}"></script>
+    <script src="{{ asset('vendor/global/global.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('js/custom.min.js') }}"></script>
+    <script src="{{ asset('js/dlabnav-init.js') }}"></script>
 
     <!-- Svganimation scripts -->
-    <script src="{{asset('vendor/svganimation/vivus.min.js')}}"></script>
-    <script src="{{asset('vendor/svganimation/svg.animation.js')}}"></script>
-    <script src="{{asset('js/styleSwitcher.js')}}"></script>
+    <script src="{{ asset('vendor/svganimation/vivus.min.js') }}"></script>
+    <script src="{{ asset('vendor/svganimation/svg.animation.js') }}"></script>
+    <script src="{{ asset('js/styleSwitcher.js') }}"></script>
 
     @stack('scripts')
     {{-- TOASTER --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
     <script>
-        @if(Session::has('success'))  
-    				toastr.success("{{ Session::get('success') }}");  
-    		@endif  
-    		@if(Session::has('info'))  
-    				toastr.info("{{ Session::get('info') }}");  
-    		@endif  
-    		@if(Session::has('warning'))  
-    				toastr.warning("{{ Session::get('warning') }}");  
-    		@endif  
-    		@if(Session::has('error'))  
-    				toastr.error("{{ Session::get('error') }}");  
-    		@endif  
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}");
+        @endif
+        @if (Session::has('info'))
+            toastr.info("{{ Session::get('info') }}");
+        @endif
+        @if (Session::has('warning'))
+            toastr.warning("{{ Session::get('warning') }}");
+        @endif
+        @if (Session::has('error'))
+            toastr.error("{{ Session::get('error') }}");
+        @endif
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
     {!! Toastr::message() !!}
