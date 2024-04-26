@@ -163,8 +163,8 @@
                                                     <p class="font-para--md">{{ $pc?->instructor->name_en }}</p>
                                                 </a>
                                                 <div class="price">
-                                                    <span>{{ $pc->price ? '৳' . $pc->price : 'Free' }}</span>
-                                                    <del>{{ $pc->old_price ? '৳' . $pc->old_price : '' }}</del>
+                                                    <span>{{ $pc->price ? 'NPR' . $pc->price : 'Free' }}</span>
+                                                    <del>{{ $pc->old_price ? 'NPR' . $pc->old_price : '' }}</del>
                                                 </div>
                                             </div>
                                             <div class="contentCard-more">
@@ -239,8 +239,8 @@
                                                     <p class="font-para--md">{{ $dc?->instructor->name_en }}</p>
                                                 </a>
                                                 <div class="price">
-                                                    <span>{{ $dc->price ? '৳' . $dc->price : 'Free' }}</span>
-                                                    <del>{{ $dc->old_price ? '৳' . $dc->old_price : '' }}</del>
+                                                    <span>{{ $dc->price ? 'NPR' . $dc->price : 'Free' }}</span>
+                                                    <del>{{ $dc->old_price ? 'NPR' . $dc->old_price : '' }}</del>
                                                 </div>
                                             </div>
                                             <div class="contentCard-more">
@@ -315,8 +315,8 @@
                                                     <p class="font-para--md">{{ $dv?->instructor->name_en }}</p>
                                                 </a>
                                                 <div class="price">
-                                                    <span>{{ $dv->price ? '৳' . $dv->price : 'Free' }}</span>
-                                                    <del>{{ $dv->old_price ? '৳' . $dv->old_price : '' }}</del>
+                                                    <span>{{ $dv->price ? 'NPR' . $dv->price : 'Free' }}</span>
+                                                    <del>{{ $dv->old_price ? 'NPR' . $dv->old_price : '' }}</del>
                                                 </div>
                                             </div>
                                             <div class="contentCard-more">
@@ -391,8 +391,8 @@
                                                     <p class="font-para--md">{{ $bc?->instructor->name_en }}</p>
                                                 </a>
                                                 <div class="price">
-                                                    <span>{{ $bc->price ? '৳' . $bc->price : 'Free' }}</span>
-                                                    <del>{{ $bc->old_price ? '৳' . $bc->old_price : '' }}</del>
+                                                    <span>{{ $bc->price ? 'NPR' . $bc->price : 'Free' }}</span>
+                                                    <del>{{ $bc->old_price ? 'NPR' . $bc->old_price : '' }}</del>
                                                 </div>
                                             </div>
                                             <div class="contentCard-more">
@@ -467,8 +467,8 @@
                                                     <p class="font-para--md">{{ $ic?->instructor->name_en }}</p>
                                                 </a>
                                                 <div class="price">
-                                                    <span>{{ $ic->price ? '৳' . $ic->price : 'Free' }}</span>
-                                                    <del>{{ $ic->old_price ? '৳' . $ic->old_price : '' }}</del>
+                                                    <span>{{ $ic->price ? 'NPR' . $ic->price : 'Free' }}</span>
+                                                    <del>{{ $ic->old_price ? 'NPR' . $ic->old_price : '' }}</del>
                                                 </div>
                                             </div>
                                             <div class="contentCard-more">
